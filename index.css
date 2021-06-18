@@ -3,6 +3,11 @@
 
 /* Header */
 
+.topLogoDiv{
+    display: flex;
+    justify-content: center;
+}
+
 h1,h2,h3,h4,h5,p,a, button, span{
     font-family: 'Poppins', sans-serif !important;
 }
@@ -13,8 +18,8 @@ body{
 
 header{
     width: 100%;
-    position: fixed;
-    top: 0px;
+    position: sticky;
+    top: -1px;
     background-color: #666666;
     padding: 20px;
     z-index: 99;
@@ -345,6 +350,10 @@ svg{
         padding-right: 30px;
     }
 
+    .topLogoDiv{
+        display: none;
+    }
+
     .logo{
         width: 100px !important;
         margin-top: 5px;
@@ -365,16 +374,17 @@ svg{
     }
 
     .menuUl{
-        display: none !important;
+        overflow: hidden;
         align-items: center;
         justify-content: center;
         position: absolute;
+        height: 0%;
         z-index: 20;
         flex-wrap: wrap;
-        top: 0px;
-        padding-top: 20px;
-        width: 89%;
+        top: -700px;
+        left: 0px;
         flex-direction: column;
+        transition: 0.3s ease;
     }
 
     .menu-icon{
@@ -403,9 +413,11 @@ svg{
     }
 
     #menuToggle:checked ~ .menuUl{
-        display: flex !important;
-        background-color: rgba(0, 0, 0, 0.85);
+        overflow: visible;
+        background-color: #666666f5;
+        top: 0px;
         padding-left: 0px;
+        height: 700%;
     }
 
     #menuToggle:checked ~ .menu-icon{
