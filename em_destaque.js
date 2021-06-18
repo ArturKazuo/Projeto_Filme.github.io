@@ -75,13 +75,12 @@ function executaCarouselInteiro(){
                     <div class="row carousel_grid">
                         <div class="col-12 col-xl-4">
                             <div class="carouselImg">
-                                <a href="filme.html#${filmeC.id}"><img src="https://image.tmdb.org/t/p/w300/${filmeC.backdrop_path}" class="img"></a>
-                            </div>
+                            <a href="filme.html#${filmeC.id}"><img src="https://image.tmdb.org/t/p/w342/${filmeC.poster_path}"></a>                            </div>
                         </div>
 
-                        <div class="col-12 col-xl-8">
+                        <div class="col-12 col-xl-8 carouselText">
                             <div class="texto_principal">
-                                <h1>${filmeC.title}</h1>
+                                <a href="filme.html#${filmeC.id}"><h1>${filmeC.title}</h1></a>
                                 <p>
                                     <strong>Sinopse:</strong>${filmeC.overview}
                                     <br><strong>Estreia:</strong>${filmeC.release_date}
@@ -100,13 +99,12 @@ function executaCarouselInteiro(){
                     <div class="row carousel_grid">
                         <div class="col-12 col-xl-4">
                             <div class="carouselImg">
-                                <a href="filme.html#${filmeC.id}"><img src="https://image.tmdb.org/t/p/w300/${filmeC.backdrop_path}" class="img"></a>
-                            </div>
+                            <a href="filme.html#${filmeC.id}"><img src="https://image.tmdb.org/t/p/w342/${filmeC.poster_path}"></a>                            </div>
                         </div>
 
-                        <div class="col-12 col-xl-8">
+                        <div class="col-12 col-xl-8 carouselText">
                             <div class="texto_principal">
-                                <h1>${filmeC.title}</h1>
+                                <a href="filme.html#${filmeC.id}"><h1>${filmeC.title}</h1></a>
                                 <p>
                                     <strong>Sinopse:</strong>${filmeC.overview}
                                     <br><strong>Estreia:</strong>${filmeC.release_date}

@@ -89,6 +89,23 @@ header{
     height: 100%;
 }
 
+.carouselText{
+    display: flex;
+    align-items: center;
+}
+
+.texto_principal h1{
+    color: black;
+}
+
+.texto_principal h1:hover{
+    color: #666666;
+}
+
+.texto_principal a{
+    text-decoration: none !important;
+}
+
 /************************* Fim Carousel ******************************/
 
 /****************** Pesquisa *******************/
