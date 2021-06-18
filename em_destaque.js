@@ -64,7 +64,7 @@ function executaCarouselInteiro(){
         let divTela = document.getElementById('carousel-inner');
         let dados = JSON.parse (this.responseText);
 
-        for (i=0; i<4; i++) {
+        for (i=0; i<6; i++) {
 
             let filmeC = dados.results[i];
 
