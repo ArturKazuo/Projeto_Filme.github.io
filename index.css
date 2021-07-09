@@ -223,7 +223,6 @@ section{
 .testimonial-box p {
     margin-bottom: 20px;
     font-size: 15px;
-    font-style: italic;
     font-weight: 400;
 }
 .ratings-icons {
@@ -231,6 +230,43 @@ section{
     margin-bottom: 15px;
 }
 
+/* adicionar avaliações */
+
+.avalDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#descrip{
+    overflow-y: scroll;
+    height: 50px;
+}
+
+.buttonPost{
+    padding-top: 15px;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.btnCancel{
+    margin-right: 5px;
+}
+
+.inputFields{
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+.inputFields:hover{
+    border-color: #f1f1f1 !important;
+}
+
+.inputFields:focus{
+    background-color: #cccccc;
+}
+
+/* fim adicionar avaliações */
 .entrevistas{
     display: flex;
     justify-content: space-between;

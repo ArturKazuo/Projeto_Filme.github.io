@@ -48,87 +48,11 @@ function executaTop_rated(){
     xhr.open ('GET', `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=pt-br`);
     xhr.send ();
 
-    document.getElementById('maisMelhoresBtn').onclick = executaTop_rated;
 }
 
 /***************************************************************************************************************************************************************************************************/
 /***************************************************************************************************************************************************************************************************/
 /***************************************************************************************************************************************************************************************************/
-
-function executaCarouselInteiro(){
-
-    carouselFunction++;
-
-    function exibeFilmesCarousel () {
-
-        let divTela = document.getElementById('carousel-inner');
-        let dados = JSON.parse (this.responseText);
-
-        for (i=0; i<6; i++) {
-
-            let filmeC = dados.results[i];
-
-            if(i == 0)
-            {
-                textoCarousel=`
-                <div class="carousel-item active">
-                    <div class="row carousel_grid">
-                        <div class="col-12 col-xl-4">
-                            <div class="carouselImg">
-                            <a href="filme.html#${filmeC.id}"><img src="https://image.tmdb.org/t/p/w342/${filmeC.poster_path}"></a>                            </div>
-                        </div>
-
-                        <div class="col-12 col-xl-8 carouselText">
-                            <div class="texto_principal">
-                                <a href="filme.html#${filmeC.id}"><h1>${filmeC.title}</h1></a>
-                                <p>
-                                    <strong>Sinopse:</strong>${filmeC.overview}
-                                    <br><strong>Estreia:</strong>${filmeC.release_date}
-                                    <br><strong>Avaliação:</strong>${filmeC.vote_average}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-            }
-            else
-            {
-                textoCarousel = textoCarousel + `
-                <div class="carousel-item">
-                    <div class="row carousel_grid">
-                        <div class="col-12 col-xl-4">
-                            <div class="carouselImg">
-                            <a href="filme.html#${filmeC.id}"><img src="https://image.tmdb.org/t/p/w342/${filmeC.poster_path}"></a>                            </div>
-                        </div>
-
-                        <div class="col-12 col-xl-8 carouselText">
-                            <div class="texto_principal">
-                                <a href="filme.html#${filmeC.id}"><h1>${filmeC.title}</h1></a>
-                                <p>
-                                    <strong>Sinopse:</strong>${filmeC.overview}
-                                    <br><strong>Estreia:</strong>${filmeC.release_date}
-                                    <br><strong>Avaliação:</strong>${filmeC.vote_average}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-            }
-
-        };
-        divTela.innerHTML = textoCarousel;
-
-        executaTop_rated();
-    }
-
-    let xhr = new XMLHttpRequest ();
-    xhr.onload = exibeFilmesCarousel;
-    xhr.open ('GET', `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=pt-br`);
-    xhr.send ();
-
-}
 
 /***************************************************************************************************************************************************************************************************/
 /***************************************************************************************************************************************************************************************************/
@@ -156,13 +80,6 @@ function exibeFilmes () {
     somaI = i;
 
     divTela.innerHTML = texto;
-
-    if(carouselFunction == 0)
-    {
-        executaCarouselInteiro();
-    }
-    
-
 }
 
 function executaPopulares () {
@@ -175,8 +92,9 @@ function executaPopulares () {
     xhr.send ();
 }
 
-window.onload = executaPopulares;
-
-document.getElementById ('maisPopbtn').onclick = executaPopulares;
+document.getElementById ('maisPopbtn').onclick = () => {
+    alert("fenofeni")
+}
+document.getElementById('maisMelhoresBtn').onclick = executaTop_rated;
 
 /****************************************************************************/
