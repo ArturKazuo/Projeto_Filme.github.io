@@ -101,6 +101,7 @@ function incluirContato (){
 
   // Atualiza os dados da tela
   imprimeDados ();
+  cancelAval();
 }
 
 
